@@ -15,4 +15,10 @@ import org.springframework.stereotype.Component;
 @Component
 public interface IDiagnosisService extends IService<Diagnosis> {
 
+    /**
+     * 根据预约号查找诊断记录
+     * @param appointmentId
+     * @return
+     */
+    public Diagnosis findByAppointment(String appointmentId);
 }

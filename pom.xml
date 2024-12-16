@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>springboot</artifactId>
+    <artifactId>PetSpringboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>petHis</name>
     <description>宠物医院后台管理系统</description>

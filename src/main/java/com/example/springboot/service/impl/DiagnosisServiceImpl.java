@@ -2,9 +2,12 @@ package com.example.springboot.service.impl;
 
 import com.example.springboot.entity.Diagnosis;
 import com.example.springboot.mapper.DiagnosisMapper;
+import com.example.springboot.mapper.OrderItemMapper;
 import com.example.springboot.service.IDiagnosisService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -17,4 +20,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class DiagnosisServiceImpl extends ServiceImpl<DiagnosisMapper, Diagnosis> implements IDiagnosisService {
 
+    @Resource
+    private DiagnosisMapper diagnosisMapper;
+
+    @Override
+    public Diagnosis findByAppointment(String appointmentId) {
+        return diagnosisMapper.findByAppointment(appointmentId);
+    }
 }

@@ -148,6 +148,11 @@ public class DiagnosisController {
         return Result.success(diagnosisService.getById(id));
     }
 
+    @GetMapping("/findByAppointment/{id}")
+    public Result findByAppointment(@PathVariable String id) {
+        return Result.success(diagnosisService.findByAppointment(id));
+    }
+
     @GetMapping("/page")
     public Result findPage(
                            @RequestParam Integer pageNum,

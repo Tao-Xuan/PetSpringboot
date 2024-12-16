@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -74,7 +75,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if (one == null) {
             one = new User();
             BeanUtil.copyProperties(userDTO, one, true);
-            // 默认一个普通用户的角色
+
+            one.setCreateTime(new Date());
+
+         // 默认一个普通用户的角色
             one.setRole(RoleEnum.ROLE_USER.toString());
             one.setBrief("");
 
