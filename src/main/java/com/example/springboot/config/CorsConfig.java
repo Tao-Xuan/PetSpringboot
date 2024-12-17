@@ -22,7 +22,7 @@ public class CorsConfig {
         // 创建跨域配置源对象，用于存储和管理跨域配置。
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
-        // 创建跨域配置对象，用于设置具体的跨域规则。
+        // 创建跨域配置对象，用于设置具体的跨域规则
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
         // 1. 允许所有来源的跨域请求
